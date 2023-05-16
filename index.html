@@ -8,21 +8,18 @@
 </head>
 <body>
 <script>
-  const pressed  = [] 
-  const secretCode = 'wesbos' 
+  const pressed  = [] //empty array for pressed keys
+  const secretCode = 'wesbos' //secret key combination to launch an action
     window.addEventListener('keyup' , (e) => {
-    console.log(event.key);
-    pressed.push(event.key)
-    console.log(pressed)
-    pressedJoined = pressed.join('');
-    console.log(pressedJoined)
+    console.log(event.key); //logs keypresses
+    pressed.push(event.key) // pushes keypresses into array
+    console.log(pressed) // logs array of pushed keys
+    pressedJoined = pressed.join(''); //joins presses keys in array into one string
+    console.log(pressedJoined) // logs joined key presses
   if (pressedJoined.includes(secretCode)) {
-    console.log("HAHAH!")
+    console.log("HAHAH!") //checks if joined keypresses include secret password and runs action
   }
   })
-
-
-
 
 </script>
 </body>
