@@ -11,7 +11,8 @@
 <body>
   <script>
     const pressed = [] //empty array for pressed keys
-    const secretCode = 'wesbos' //secret key combination to launch an action
+    const secretCode = 'unicorn' //secret key combination to launch an action
+    console.log(`The password is ${secretCode}`)
     window.addEventListener('keyup', (e) => {
       console.log(event.key); //logs keypresses
       pressed.push(event.key) // pushes keypresses into array
@@ -24,9 +25,6 @@
         cornify_add(); //Runs a function displaying unicorns whe password entered
       }
     })
-
-
-
   </script>
 </body>
 

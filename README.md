@@ -13,7 +13,8 @@ Working on this project helped me in better understanding of:
 
 ## Usage
 
-You can test the app here: https://manonthemon.github.io/key-sequence-detection
+You can test the app here: https://manonthemon.github.io/key-sequence-detection. <br>
+Open the console to see the secret password.
 
 ## Copyright
 
