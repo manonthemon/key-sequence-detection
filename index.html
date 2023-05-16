@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Key Detection</title>
   <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
-<body>
-<script>
-  const pressed  = [] //empty array for pressed keys
-  const secretCode = 'wesbos' //secret key combination to launch an action
-    window.addEventListener('keyup' , (e) => {
-    console.log(event.key); //logs keypresses
-    pressed.push(event.key) // pushes keypresses into array
-    console.log(pressed) // logs array of pushed keys
-    pressedJoined = pressed.join(''); //joins presses keys in array into one string
-    console.log(pressedJoined) // logs joined key presses
-  if (pressedJoined.includes(secretCode)) {
-    console.log("HAHAH!") //checks if joined keypresses include secret password and runs action
-  }
-  })
 
-</script>
+<body>
+  <script>
+    const pressed = [] //empty array for pressed keys
+    const secretCode = 'wesbos' //secret key combination to launch an action
+    window.addEventListener('keyup', (e) => {
+      console.log(event.key); //logs keypresses
+      pressed.push(event.key) // pushes keypresses into array
+      pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length) // limits length of array to the length of password
+      console.log(pressed) // logs array of pushed keys
+      pressedJoined = pressed.join(''); //joins presses keys in array into one string
+      console.log(pressedJoined) // logs joined key presses
+      if (pressedJoined.includes(secretCode)) {
+        console.log("YOu GOT IT!") //checks if joined keypresses include secret password and runs action
+        cornify_add(); //Runs a function displaying unicorns whe password entered
+      }
+    })
+
+
+
+  </script>
 </body>
+
 </html>
